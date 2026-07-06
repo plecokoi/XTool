@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.app-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 1cm;
+    font-family: "Exo 2", sans-serif;
+    font-weight: 600;
+}
+
+.app-container {
+    margin-top: 150px;
+}
+
+.calculator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_frame {
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 30px;
+    width: min-content;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: minmax(auto, auto) repeat(5, 70px);
+}
+
+.main_frame>button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(200, 200, 200, .3);
+    height: 100%;
+}
+
+.main_frame>button:hover {
+    background-color: rgba(200, 200, 200, .7);
+}
+
+.output {
+    font-size: 25px;
+    color: white;
+    grid-column: 1/-1;
+    min-height: 60px;
+    max-height: auto;
+    background-color: rgba(0, 0, 0, .9);
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-direction: column;
+    padding: 20px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.solution {
+    font-size: 45px;
+}
+
+.span_two {
+    grid-column: span 2;
+}
+
+
+
+
+
+/*DARK THEME (BY GEMINI)*/
+
+.dark-theme body {
+    background: linear-gradient(135deg, #0e1617 0%, #152224 50%, #1e3133 100%);
+    background-attachment: fixed;
+    color: #f1f5f9;
+}
+
+.dark-theme .app-title {
+    color: #ffffff;
+    text-shadow: 0 2px 10px rgba(95, 158, 160, 0.2);
+}
+
+.dark-theme .main_frame {
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 15px 40px;
+    border: 1px solid rgba(67, 131, 132, 0.3);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: rgba(21, 34, 36, 0.6);
+    backdrop-filter: blur(8px);
+}
+
+.dark-theme .output {
+    background-color: rgba(14, 22, 23, 0.95) !important;
+    border-bottom: 2px solid rgba(67, 131, 132, 0.4);
+    color: #ffffff;
+}
+
+.dark-theme .operand {
+    color: var(--theme-color-light);
+}
+
+.dark-theme .solution {
+    color: #ffffff;
+}
+
+.dark-theme .main_frame > button {
+    background-color: rgba(34, 55, 58, 0.5) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    font-family: "Nunito", sans-serif;
+    transition: all 150ms ease;
+}
+
+.dark-theme .main_frame > button:hover {
+    background-color: rgba(67, 131, 132, 0.4) !important; 
+}
+
+.dark-theme button[data-all-clear],
+.dark-theme button[data-clear],
+.dark-theme button[data-solution] {
+    color: var(--theme-color-light) !important;
+    font-weight: 700;
+}
+
+.dark-theme .navBar {
+    background-color: rgba(21, 34, 36, 0.85);
+    border-bottom: 1px solid rgba(95, 158, 160, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.dark-theme nav a {
+    color: var(--theme-color-light) !important;
+}
+
+.dark-theme nav a::before, .dark-theme nav a::after{
+    background-color: var(--theme-color-light)
+}

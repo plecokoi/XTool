@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root {
+    --theme-color: cadetblue;
+    --theme-color-dark: rgb(67, 131, 132);
+    --theme-color-light: rgb(175, 197, 197);
+    --info-text-color: black;
+    --error-color: red;
+}
+
+.dark-theme{
+    --info-text-color: var(--theme-color-light);
+    --error-color: #ff6b6b;
+}
+
+html,
+body {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.app-container {
+    margin-top: 150px;
+}
+
+#welcome-div {
+    text-align: center;
+}
+
+#app-title {
+    color: black;
+    text-align: center;
+    font-size: 1cm;
+    font-family: "Exo 2", sans-serif;
+    font-weight: 600;
+}
+
+#search-div {
+    border-radius: 10px;
+    width: 80%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto 0 auto;
+}
+
+#search-input {
+    display: block;
+    padding: 10px;
+    width: 70%;
+    margin: 0 auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    min-width: 100px;
+    font-family: "Nunito", sans-serif;
+}
+
+#search-div span {
+    cursor: pointer;
+    color: black;
+}
+
+#info-text {
+    visibility: hidden;
+    font-family: "Nunito", sans-serif;
+}
+
+#word-container {
+    font-family: "Nunito", sans-serif;
+    color: black;
+    visibility: hidden;
+    margin: 0px auto 0px auto;
+}
+
+#app-div {
+    background-color: white;
+    display: grid;
+    visibility: hidden;
+    margin-bottom: 0px;
+}
+
+#result-div {
+    border-radius: 20px;
+    margin: auto;
+    width: 90%;
+    margin-bottom: 20px;
+    font-family: "Nunito", sans-serif;
+}
+
+#result-div li {
+    font-size: 20px;
+    list-style-type: none;
+    list-style-position: inside;
+    border-left: solid 5px var(--theme-color-dark);
+    margin: 30px -70px;
+    padding: 5px 20px;
+}
+
+.details {
+    margin-top: 10px;
+    display: block;
+    font-size: 15px;
+}
+
+#word-div {
+    padding: 0;
+    text-align: center;
+}
+
+#word {
+    font-size: 30px;
+}
+
+#pronounciation {
+    display: block;
+}
+
+#speak-btn {
+    cursor: pointer;
+    display: inline;
+    margin-left: 10px;
+}
+
+.meaning-title {
+    font-family: "Nunito", sans-serif;
+    font-size: 25px;
+    padding: 10px;
+    margin: 20px -10px;
+    width: 100%;
+    background-color: var(--theme-color);
+    color: white;
+}
+
+#close-btn:hover {
+    transition: ease 300ms;
+    text-shadow: 0 0 2px gray;
+}
+
+
+
+
+
+
+/*DARK THEME (BY GEMINI)*/
+.dark-theme body {
+    background: linear-gradient(135deg, #0e1617 0%, #152224 50%, #1e3133 100%);
+    background-attachment: fixed;
+    color: #f1f5f9;
+}
+
+.dark-theme #app-div,
+.dark-theme .app-container {
+    background-color: transparent !important;
+    background: transparent !important;
+}
+
+.dark-theme #app-title {
+    color: #ffffff;
+    text-shadow: 0 2px 10px rgba(95, 158, 160, 0.2);
+}
+
+.dark-theme #info-text {
+    color: var(--theme-color-light);
+}
+
+
+.dark-theme #close-btn {
+    color: var(--theme-color-light);
+    cursor: pointer;
+    transition: color 150ms ease;
+}
+
+.dark-theme #close-btn:hover {
+    color: #ffffff;
+}
+
+.dark-theme #word-container {
+    border-bottom: 1px solid rgba(67, 131, 132, 0.2);
+    padding-bottom: 15px;
+}
+
+.dark-theme #word {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.dark-theme #pronounciation {
+    color: var(--theme-color-light);
+}
+
+.dark-theme #speak-btn {
+    color: var(--theme-color);
+    cursor: pointer;
+    transition: all 150ms ease;
+}
+
+.dark-theme #speak-btn:hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px var(--theme-color-light);
+}
+
+.dark-theme .meaning-title {
+    background-color: var(--theme-color-dark) !important;
+    color: #ffffff !important;
+    font-family: "Exo 2", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    width: 100% !important;
+    box-sizing: border-box;
+    margin: 25px 0 0 0 !important; 
+    padding: 12px 20px;
+    border-radius: 8px 8px 0 0;
+    border-left: none !important;
+}
+
+.dark-theme #result-div {
+    background-color: rgba(34, 55, 58, 0.45) !important; 
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(67, 131, 132, 0.3) !important;
+    border-top: none !important; 
+    width: 100% !important;
+    box-sizing: border-box;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.dark-theme #result-div ul {
+    list-style-type: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.dark-theme #result-div ul li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06); 
+    padding: 20px 0 20px 15px;
+    margin: 0px 0 30px 0;
+}
+
+.dark-theme #result-div ul li p {
+    color: var(--theme-color-light) !important; 
+    font-family: "Nunito", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0;
+    display: flex;
+    flex-direction: column; 
+    gap: 6px;
+}
+
+.dark-theme #result-div .details {
+    color: #ffffff !important; 
+    font-size: 16px;
+    font-weight: 400;
+    padding-left: 2px;
+}
+
+.dark-theme .navBar {
+    background-color: rgba(21, 34, 36, 0.85);
+    border-bottom: 1px solid rgba(95, 158, 160, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.dark-theme nav a {
+    color:white !important;
+}
+
+.dark-theme nav a::before,
+.dark-theme nav a::after {
+    background-color: var(--theme-color-light);
+}
+
+.dark-theme #search-div {
+    background-color: #22373a !important; 
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    transition: all 200ms ease;
+    padding-right: 15px;
+}
+
+.dark-theme #search-input {
+    background-color: transparent !important;
+    color: #ffffff !important;
+    border: none !important;
+    outline: none !important;
+    margin: 0 !important;
+}
+
+.dark-theme #search-input:focus,
+.dark-theme #search-input:active,
+.dark-theme #search-input:-webkit-autofill,
+.dark-theme #search-input:-webkit-autofill:hover,
+.dark-theme #search-input:-webkit-autofill:focus {
+    background-color: transparent !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    border-radius: 0px !important; 
+    box-shadow: 0 0 0px 1000px #22373a inset !important;
+}
+
+.dark-theme #search-input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}

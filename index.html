@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XTool</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+
+    <nav class="navBar">
+        <ul>
+            <a href="index.html" class="webLogo"><span><i class="material-symbols-outlined">handyman</i>XTool<i class="material-symbols-outlined">handyman</i></span></a>
+            <li><i class="material-symbols-outlined" id="searchButton">search</i></li>
+            <li><i class="material-symbols-outlined" id="menuButton">menu</i></li>
+        </ul>
+       
+    </nav>
+
+    <div class="menuDiv">
+        <ul>
+             <li><span id="favourites">Favourites</span></li>
+            <li><span id="recents">Recents</span></li>
+            <li><span id="settings" data-url="Settings/index.html">Settings</span></li>
+        </ul>
+       
+    </div>
+
+    <div class="searchDiv">
+        <input type="text" placeholder="search" id="searchBox" autocomplete="off">
+    </div>
+
+
+
+    <div class="devTextDiv">
+        <span class="devTextSpan">DEV TEXT</span>
+    </div>
+
+    <button type="button" class="closeBtn"><span class="material-symbols-outlined">close</span></button>
+
+
+
+    <div class="settingsDiv">
+
+        <div class="settingsSection">
+            <h3>Appearance</h3>
+            
+            <div class="settingRow">
+                <label>Theme</span></label>
+                <button type="button" id="darkModeToggle" data-setting="theme">Toggle Dark Mode</button>
+            </div>
+            
+            <div class="settingRow">
+                <label for="cardSizeSelect">Card Layout Size</label>
+                <select id="cardSizeSelect" data-setting="cardSize">
+                    <option value="normal">Normal (Default)</option>
+                    <option value="compact">Compact</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div class="settingsSection">
+            <h3>Preferences</h3>
+
+            <div class="settingRow">
+                <label>Launch tools in new tab</label>
+                <input type="checkbox" id="newTabCheckbox" data-setting="newTab">
+            </div>
+
+            <div class="settingRow">
+                <label>Recent tools limit (<span id="historyVal">3</span>)</label>
+                <input type="range" id="historyLimitSlider" min="3" max="10" value="3" data-setting="recentCount">
+            </div>
+        </div>
+
+        <div class="settingsSection">
+            <h3>Data & Privacy</h3>
+
+            <div class="settingRow buttonsRow">
+                <button type="button" class="dangerBtn" id="clearRecentsBtn">Clear History</button>
+                <button type="button" class="dangerBtn" id="clearFavsBtn">Reset Favorites</button>
+                <button type="button" class="dangerBtn" id="clearSettingsBtn">Reset Settings</button>
+            </div>
+
+            <div class="settingRow">
+                <label>History retention policy</label>
+                <select id="autoClearSelect" data-setting="history">
+                    <option value="forever">Keep History Forever</option>
+                    <option value="1hour">Clear Recents After 1 Hour</option>
+                    <option value="1day">Clear Recents After 1 Day</option>
+                    <option value="session">Clear Upon Browser Close</option>
+                </select>
+            </div>
+        </div>
+    
+    </div>
+
+
+
+
+    <div class="toolContainer">
+
+        <div class="toolElem">
+            <span class="toolName">To Do List</span>
+            <span class="material-symbols-outlined favIcon">favorite</span>
+            <i class="material-symbols-outlined toolIcon">checklist</i>
+            <span class="toolDescription">Sort out your daily tasks</span>
+            <button type="button" class="toolButton" id="ToDoBtn" data-url='To Do List/index.html'><i
+                    class="material-symbols-outlined buttonIcon">chevron_forward</i></button>
+        </div>
+
+        <div class="toolElem">
+            <span class="toolName">Notes App</span>
+            <span class="material-symbols-outlined favIcon">favorite</span>
+            <i class="material-symbols-outlined toolIcon">text_snippet</i>
+            <span class="toolDescription">Keep ideas organised</span>
+            <button type="button" class="toolButton" id="NotesBtn" data-url='NotesApp/index.html'><i
+                    class="material-symbols-outlined buttonIcon">chevron_forward</i></button>
+        </div>
+
+        <div class="toolElem">
+            <span class="toolName">English Dictionary</span>
+            <span class="material-symbols-outlined favIcon">favorite</span>
+            <i class="material-symbols-outlined toolIcon">dictionary</i>
+            <span class="toolDescription">Discover definitions</span>
+            <button type="button" class="toolButton" id="DictBtn" data-url='English Dictionary/index.html'><i
+                    class="material-symbols-outlined buttonIcon">chevron_forward</i></button>
+        </div>
+
+        <div class="toolElem">
+            <span class="toolName">Calculator</span>
+            <span class="material-symbols-outlined favIcon">favorite</span>
+            <i class="material-symbols-outlined toolIcon">calculate</i>
+            <span class="toolDescription">Solve your problems</span>
+            <button type="button" class="toolButton" id="CalcBtn" data-url='Calculator/index.html'><i
+                    class="material-symbols-outlined buttonIcon">chevron_forward</i></button>
+        </div>
+
+        <div class="toolElem">
+            <span class="toolName">Unit Converter</span>
+            <span class="material-symbols-outlined favIcon">favorite</span>
+            <i class="material-symbols-outlined toolIcon">currency_exchange</i>
+            <span class="toolDescription">Get your desired unit</span>
+            <button type="button" class="toolButton" id="UnitBtn" data-url='Unit converter/index.html'><i
+                    class="material-symbols-outlined buttonIcon">chevron_forward</i></button>
+        </div>
+
+        <div class="toolElem">
+            <span class="toolName">Translator</span>
+            <span class="material-symbols-outlined favIcon">favorite</span>
+            <i class="material-symbols-outlined toolIcon">translate</i>
+            <span class="toolDescription">Break language barriers</span>
+            <button type="button" class="toolButton" id="TranslatorBtn" data-url='Translator/index.html'><i
+                    class="material-symbols-outlined buttonIcon">chevron_forward</i></button>
+        </div>
+
+        <div class="toolElem">
+            <span class="toolName">Text to Speech</span>
+            <span class="material-symbols-outlined favIcon">favorite</span>
+            <i class="material-symbols-outlined toolIcon">text_to_speech</i>
+            <span class="toolDescription">Bring your words to life</span>
+            <button type="button" class="toolButton" id="TextSpeechBtn" data-url='Text to Speech/index.html'><i
+                    class="material-symbols-outlined buttonIcon">chevron_forward</i></button>
+        </div>
+
+        <div class="toolElem">
+            <span class="toolName">Chatbot</span>
+            <span class="material-symbols-outlined favIcon">favorite</span>
+            <i class="material-symbols-outlined toolIcon">chat</i>
+            <span class="toolDescription">Clear your doubts</span>
+            <button type="button" class="toolButton" id="ChatbotBtn" data-url='Chatbot/index.html'><i
+                    class="material-symbols-outlined buttonIcon">chevron_forward</i></button>
+        </div>
+
+        <div class="toolElem">
+            <span class="toolName">BMI Calculator</span>
+            <span class="material-symbols-outlined favIcon">favorite</span>
+            <i class="material-symbols-outlined toolIcon">monitor_weight</i>
+            <span class="toolDescription">Track your health</span>
+            <button type="button" class="toolButton" id="BMIBtn" data-url='BMI Calculator/index.html'><i
+                    class="material-symbols-outlined buttonIcon">chevron_forward</i></button>
+        </div>
+
+        <div class="line-divider restricted">
+            <hr class="line-segment">
+            <span>UNDER DEVELOPMENT</span>
+        </div>
+    
+        <div class="toolElem restricted">
+            <span class="toolName">Geometric calculator</span>
+            <i class="material-symbols-outlined toolIcon">architecture</i>
+            <span class="toolDescription">Solve shapes and figures</span>
+            <button type="button" class="toolButton"><i
+                    class="material-symbols-outlined buttonIcon">chevron_forward</i></button>
+        </div>
+
+        <div class="toolElem restricted">
+            <span class="toolName">Timer</span>
+            <i class="material-symbols-outlined toolIcon">timer</i>
+            <span class="toolDescription">Track your time</span>
+            <button type="button" class="toolButton"><i
+                    class="material-symbols-outlined buttonIcon">chevron_forward</i></button>
+        </div>
+
+        <div class="toolElem restricted">
+            <span class="toolName">Password generator</span>
+            <i class="material-symbols-outlined toolIcon">password</i>
+            <span class="toolDescription">Create secure passwords</span>
+            <button type="button" class="toolButton"><i
+                    class="material-symbols-outlined buttonIcon">chevron_forward</i></button>
+        </div>
+
+        <div class="toolElem restricted">
+            <span class="toolName">Quote generator</span>
+            <i class="material-symbols-outlined toolIcon">format_quote</i>
+            <span class="toolDescription">Find inspiration with quotes</span>
+            <button type="button" class="toolButton"><i
+                    class="material-symbols-outlined buttonIcon">chevron_forward</i></button>
+        </div>
+
+        <div class="toolElem restricted">
+            <span class="toolName">Color generator</span>
+            <i class="material-symbols-outlined toolIcon">palette</i>
+            <span class="toolDescription">Unleash a world of colors</span>
+            <button type="button" class="toolButton"><i
+                    class="material-symbols-outlined buttonIcon">chevron_forward</i></button>
+        </div>
+
+        <div class="toolElem restricted">
+            <span class="toolName">Spinning wheel</span>
+            <i class="material-symbols-outlined toolIcon">poker_chip</i>
+            <span class="toolDescription">Let the wheel decide</span>
+            <button type="button" class="toolButton"><i
+                    class="material-symbols-outlined buttonIcon">chevron_forward</i></button>
+        </div>
+
+    </div>
+
+
+
+    <!--styling navbar-->
+    <style>
+        /*nav bar*/
+
+        @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+        :root {
+            --theme-color: cadetblue;
+            --theme-color-dark: rgb(67, 131, 132);
+        }
+
+        .navBar {
+            background-color: var(--theme-color);
+            position: absolute;
+            padding: 20px 0 20px 0;
+            min-width: 300px;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1;
+            overflow-x: hidden;
+        }
+
+        nav li {
+            display: inline;
+            color: white;
+            float: inline-end;
+            padding-right: 5%;
+        }
+
+        nav i:hover {
+            text-shadow: 0 0 25px white;
+            transition: all ease 250ms;
+        }
+
+        nav i {
+            cursor: pointer;
+            user-select: none;
+        }
+
+        nav a {
+            font-family: "Exo 2", sans-serif;
+            text-decoration: none;
+            font-size: 175%;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+        }
+
+        /*logo animation*/
+
+        nav a::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            margin: 0;
+            padding: 0;
+            width: 0;
+            height: 2px;
+            background-color: white;
+        }
+
+        nav a:hover::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 2px;
+            background-color: white;
+            transition: all ease 600ms;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            margin: 0;
+            padding: 0;
+            width: 0;
+            height: 2px;
+            background-color: white;
+        }
+
+        nav a:hover::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 2px;
+            background-color: white;
+            transition: all ease 600ms;
+        }
+    </style>
+
+    <script src="main.js"></script>
+
+
+</body>
+
+</html>

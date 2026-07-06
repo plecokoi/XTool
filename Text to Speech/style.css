@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+:root {
+    --theme-color: cadetblue;
+    --theme-color-dark: rgb(67, 131, 132);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.app-div {
+    margin-top: 150px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1cm;
+    font-family: "Exo 2", sans-serif;
+    font-weight: 600;
+}
+
+.input-box {
+    resize: none;
+    height: 120px;
+    display: block;
+    border: 3px solid var(--theme-color);
+    margin: 0 auto 0 auto;
+    width: 100%;
+    min-width: 230px;
+    font-family: "Nunito", sans-serif;
+}
+
+.input-box:focus {
+    outline: none;
+    box-shadow: 0px 0px 5px var(--theme-color-dark);
+}
+
+.btn-panel {
+    width: 100%;
+    min-width: 230px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+.btn {
+    background-color: var(--theme-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    padding-top: 5px;
+    outline: none;
+}
+
+.btn:hover {
+    background-color: var(--theme-color-dark);
+    transition: ease-out 300ms;
+}
+
+.app-panel {
+    width: 50%;
+    min-width: 330px;
+    margin: 50px auto 50px auto;
+}
+
+.option-panel {
+    width: 50%;
+    min-width: 100px;
+    padding: 10px;
+    box-shadow: 0 0 5px var(--theme-color-dark);
+    font-family: "Nunito", sans-serif;
+}
+
+.option-panel input {
+    display: flex;
+    width: 100%;
+    cursor: pointer;
+}
+
+.option-panel label {
+    font-size: 15px;
+}
+
+@keyframes waveEffect {
+    0% {
+        box-shadow: 0 0 5px var(--theme-color);
+    }
+
+    50% {
+        box-shadow: 0 0 20px var(--theme-color);
+    }
+
+    100% {
+        box-shadow: 0 0 5px var(--theme-color);
+    }
+}
+
+.speaking {
+    animation: waveEffect 1s infinite ease-in-out;
+}
+
+.bottom-panel {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+}
+
+.voice-panel p {
+    font-size: 20px;
+    margin: 10px 0 0 0;
+    font-family: "Nunito", sans-serif;
+}
+
+.voice-panel {
+    text-align: center;
+}
+
+.voice-panel select {
+    outline: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 30px;
+    width: 80%;
+    border: none;
+    box-shadow: 0 0 2px black;
+    cursor: pointer;
+    font-family: "Nunito", sans-serif;
+}
+
+.option-panel input[type="range"] {
+    accent-color: var(--theme-color) !important;
+    cursor: pointer;
+}
+
+
+
+/*DARK THEME (BY GEMINI)*/
+
+.dark-theme {
+    background: linear-gradient(135deg, #0e1617 0%, #152224 50%, #1e3133 100%) !important;
+    background-attachment: fixed;
+    color: #f1f5f9;
+}
+
+
+.dark-theme .navBar {
+    background-color: rgba(21, 34, 36, 0.85);
+    border-bottom: 1px solid rgba(95, 158, 160, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.dark-theme nav a {
+    color: var(--theme-color-light) !important;
+}
+
+.dark-theme nav a::before,
+.dark-theme nav a::after {
+    background-color: var(--theme-color-light);
+}
+
+
+.dark-theme h1 {
+    color: #ffffff;
+    text-shadow: 0 2px 10px rgba(95, 158, 160, 0.2);
+}
+
+.dark-theme .app-panel {
+    background-color: rgba(34, 55, 58, 0.45) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(67, 131, 132, 0.3) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.dark-theme .input-box {
+    background-color: #22373a !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(67, 131, 132, 0.2) !important;
+    border-radius: 8px !important;
+    padding: 15px !important;
+    width: 100%;
+    box-sizing: border-box;
+    scrollbar-width: thin; 
+    scrollbar-color: rgba(67, 131, 132, 0.4) transparent;
+}
+
+.dark-theme .input-box::placeholder {
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.dark-theme .input-box::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.dark-theme .input-box::-webkit-scrollbar-track {
+    background: transparent !important; 
+}
+
+.dark-theme .input-box::-webkit-scrollbar-thumb {
+    background-color: rgba(67, 131, 132, 0.4) !important; 
+    border-radius: 10px;
+}
+
+.dark-theme .input-box::-webkit-scrollbar-thumb:hover {
+    background-color: var(--theme-color-light) !important; 
+}
+
+.dark-theme .input-box::-webkit-scrollbar-corner,
+.dark-theme .input-box::-webkit-resizer {
+    background-color: #22373a !important;
+}
+
+.dark-theme .btn {
+    background-color: #22373a !important;
+    color: #ffffff !important;
+    border-radius: 50% !important;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    padding-top: 5px;
+    transition: all 200ms ease;
+    border: 3px solid var(--theme-color-light);
+}
+
+.dark-theme .btn:hover {
+    background-color: var(--theme-color-light) !important;
+    box-shadow: 0 0 12px rgba(67, 131, 132, 0.5);
+}
+
+.dark-theme .option-panel label,
+.dark-theme .voice-panel p {
+    color: var(--theme-color-light) !important;
+    font-weight: 600;
+}
+
+.dark-theme .setting-span {
+    color: #ffffff !important;
+}
+
+.dark-theme .setting-input {
+    accent-color: var(--theme-color-light) !important;
+}
+
+.dark-theme .voice-select {
+    background-color: #22373a !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(67, 131, 132, 0.3) !important;
+    border-radius: 6px !important;
+    padding: 8px 12px !important;
+    width: 100%;
+    outline: none;
+}
+
+.dark-theme .voice-select option {
+    background-color: #152224 !important;
+    color: #ffffff !important;
+}

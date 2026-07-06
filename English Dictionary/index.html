@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Dictionary</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <script src="../theme-sync.js"></script>
+</head>
+
+<body>
+
+    <nav class="navBar">
+        <ul>
+            <a href="../index.html" class="webLogo"><span><i class="material-symbols-outlined">handyman</i>XTool<i
+                        class="material-symbols-outlined">handyman</i></span></a>
+        </ul>
+    </nav>
+
+    <div class="app-container">
+
+        <div id="welcome-div">
+            <h1 id="app-title">English Dictionary</h1>
+
+            <div id="search-div">
+                <input type="text" id="search-input" placeholder="Search word">
+                <span class="material-symbols-outlined" id="close-btn">close</span>
+            </div>
+
+            <p id="info-text">Info</p>
+
+        </div>
+
+        <div id="word-container">
+            <p id="word-div">
+                <span id="word"></span>
+                <span class="material-symbols-outlined" id="speak-btn">volume_up</span>
+                <span id="pronounciation"></span>
+            </p>
+        </div>
+
+    </div>
+
+    <div id="app-div"></div>
+
+    <!--styling navbar-->
+    <style>
+        /*nav bar*/
+
+        @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+        :root {
+            --theme-color: cadetblue;
+            --theme-color-dark: rgb(67, 131, 132);
+        }
+
+        .navBar {
+            background-color: var(--theme-color);
+            position: absolute;
+            padding: 20px 0 20px 0;
+            min-width: 300px;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1;
+            overflow-x: hidden;
+        }
+
+        nav li {
+            display: inline;
+            color: white;
+            float: inline-end;
+            padding-right: 5%;
+        }
+
+        nav i:hover {
+            text-shadow: 0 0 25px white;
+            transition: all ease 250ms;
+        }
+
+        nav i {
+            cursor: pointer;
+            user-select: none;
+        }
+
+        nav a {
+            font-family: "Exo 2", sans-serif;
+            text-decoration: none;
+            font-size: 175%;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+
+        }
+
+        /*logo animation*/
+
+        nav a::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            margin: 0;
+            padding: 0;
+            width: 0;
+            height: 2px;
+            background-color: white;
+        }
+
+        nav a:hover::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 2px;
+            background-color: white;
+            transition: all ease 600ms;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            margin: 0;
+            padding: 0;
+            width: 0;
+            height: 2px;
+            background-color: white;
+        }
+
+        nav a:hover::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 2px;
+            background-color: white;
+            transition: all ease 600ms;
+        }
+    </style>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

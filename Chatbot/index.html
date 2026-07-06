@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <script src="../theme-sync.js"></script>
+    
+    <style>
+        /*nav bar*/
+
+        @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+        :root {
+            --theme-color: cadetblue;
+            --theme-color-dark: rgb(67, 131, 132);
+        }
+
+        .navBar {
+            background-color: var(--theme-color);
+            position: absolute;
+            padding: 20px 0 20px 0;
+            min-width: 300px;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1;
+            overflow-x: hidden;
+        }
+
+        nav li {
+            display: inline;
+            color: white;
+            float: inline-end;
+            padding-right: 5%;
+        }
+
+        nav i:hover {
+            text-shadow: 0 0 25px white;
+            transition: all ease 250ms;
+        }
+
+        nav i {
+            cursor: pointer;
+            user-select: none;
+        }
+
+        nav a {
+            font-family: "Exo 2", sans-serif;
+            text-decoration: none;
+            font-size: 175%;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+        }
+
+        /*logo animation*/
+
+        nav a::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            margin: 0;
+            padding: 0;
+            width: 0;
+            height: 2px;
+            background-color: white;
+        }
+
+        nav a:hover::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 2px;
+            background-color: white;
+            transition: all ease 600ms;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            margin: 0;
+            padding: 0;
+            width: 0;
+            height: 2px;
+            background-color: white;
+        }
+
+        nav a:hover::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 2px;
+            background-color: white;
+            transition: all ease 600ms;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navBar">
+        <ul>
+            <a href="../index.html" class="webLogo"><span><i class="material-symbols-outlined">handyman</i>XTool<i
+                        class="material-symbols-outlined">handyman</i></span></a>
+        </ul>
+    </nav>
+
+    <div class="app-div">
+
+        <h1>Chatbot</h1>
+
+        <div class="phone-div">
+
+            <div class="bot-panel">
+                <span><i class="material-symbols-outlined">smart_toy</i>BOT</span>
+            </div>
+
+            <div class="conversation-panel">
+                <div class="bot-line">
+                    <div class="bot-avatar"><i class="material-symbols-outlined">smart_toy</i></div>
+                    <div class="bot-msg"><span>Hello, how can I help?</span></div>
+                </div>
+
+            </div>
+
+            <div class="msg-panel">
+                <input type="text" class="input-box" placeholder="Ask anything">
+                <div class="button-div">
+                    <button type="button" onclick="sendMsg()"><i class="material-symbols-outlined">send</i></button>
+                    <button type="button" onclick="clearMsg()"><i class="material-symbols-outlined">delete</i></button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="main.js"></script>
+    <script src="config.js"></script>
+
+</body>
+
+</html>

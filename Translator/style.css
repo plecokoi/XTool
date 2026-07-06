@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+:root {
+    --theme-color: cadetblue;
+    --theme-color-dark: rgb(67, 131, 132);
+    --output-color: black;
+    --error-msg: red;
+}
+
+.dark-theme{
+    --output-color:white;
+    --error-msg: rgb(251, 94, 94);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.app-div {
+    margin-top: 150px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1cm;
+    font-family: "Exo 2", sans-serif;
+    font-weight: 600;
+}
+
+.translate-div textarea {
+    resize: none;
+    font-family: "Nunito", sans-serif;
+}
+
+.translate-div {
+    width: 50%;
+    min-width: 380px;
+    height: max-content;
+    border: 3px solid black;
+    margin: 10px auto 0 auto;
+
+}
+
+.textarea-div {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 200px;
+}
+
+.control-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr 1fr 3fr 1fr 1fr;
+}
+
+.translate-div textarea {
+    outline: none;
+    background-color: white;
+}
+
+.output-box {
+    border: 1px solid gray;
+}
+
+.control-panel button {
+    background-color: var(--theme-color);
+    color: white;
+    border: 1px solid var(--theme-color-dark);
+    padding-top: 5px;
+    cursor: pointer;
+}
+
+.control-panel button:hover {
+    background-color: var(--theme-color-dark);
+    transition: 300ms ease-out;
+}
+
+.control-panel select {
+    border: 1px solid var(--theme-color-dark);
+    outline: none;
+    font-family: "Nunito", sans-serif;
+}
+
+.control-panel select:hover {
+    cursor: pointer;
+}
+
+.control-panel select option {
+    max-height: 100px;
+}
+
+.translate-btn {
+    display: block;
+    margin: 30px auto 0 auto;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: var(--theme-color);
+    color: white;
+    width: 50%;
+    min-width: 380px;
+    cursor: pointer;
+    font-family: "Nunito", sans-serif;
+}
+
+.translate-btn:hover {
+    background-color: var(--theme-color-dark);
+    transition: 300ms ease-out;
+}
+
+.warning-msg {
+    margin: 50px auto 0 auto;
+    padding: 10px;
+    text-align: center;
+    width: 50%;
+    min-width: 380px;
+    box-sizing: border-box;
+    border: 2px solid var(--theme-color-dark);
+    font-size: 17px;
+    background-color: var(--theme-color);
+    color: white;
+    visibility: hidden;
+    font-family: "Nunito", sans-serif;
+}
+
+
+
+/*DARK THEME (BY GEMINI)*/
+
+.dark-theme body {
+    background: linear-gradient(135deg, #0e1617 0%, #152224 50%, #1e3133 100%) !important;
+    background-attachment: fixed !important;
+    color: #f1f5f9;
+}
+
+.dark-theme .navBar {
+    background-color: rgba(21, 34, 36, 0.85);
+    border-bottom: 1px solid rgba(95, 158, 160, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.dark-theme nav a {
+    color: var(--theme-color-light) !important;
+}
+
+.dark-theme nav a::before,
+.dark-theme nav a::after {
+    background-color: var(--theme-color-light);
+}
+
+.dark-theme h1 {
+    color: #ffffff;
+}
+
+.dark-theme .translate-div {
+    background-color: #22373a;
+    border: 1px solid var(--theme-color-dark);
+}
+
+.dark-theme .translate-div textarea {
+    background-color: #22373a;
+    color: #ffffff;
+}
+
+.dark-theme .output-box {
+    border-left: 1px solid var(--theme-color-dark);
+}
+
+.dark-theme .control-panel {
+    background-color: #152224;
+}
+
+.dark-theme .control-panel button {
+    background-color: #152224;
+    color: white;
+    border-right: 1px solid var(--theme-color-dark);
+}
+
+.dark-theme .control-panel button:hover {
+    background-color: #22373a;
+}
+
+.dark-theme .control-panel select {
+    background-color: #152224;
+    color: white;
+}
+
+.dark-theme .control-panel select:hover {
+    background-color: #22373a;
+}

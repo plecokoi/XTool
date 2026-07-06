@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <script src="../theme-sync.js"></script>
+</head>
+
+<body>
+
+    <nav class="navBar">
+        <ul>
+            <a href="../index.html" class="webLogo"><span><i class="material-symbols-outlined">handyman</i>XTool<i
+                        class="material-symbols-outlined">handyman</i></span></a>
+        </ul>
+    </nav>
+
+    <div class="app-div">
+        <h1>Unit Converter</h1>
+        <div class="category-div">
+            <span>Select category</span>
+            <div class="btn-div">
+                <button type="button" class="category-btn" onclick="open_preview(this.textContent)">Length</button>
+                <button type="button" class="category-btn" onclick="open_preview(this.textContent)">Mass</button>
+                <button type="button" class="category-btn" onclick="open_preview(this.textContent)">Time</button>
+                <button type="button" class="category-btn" onclick="open_preview(this.textContent)">Temperature</button>
+                <button type="button" class="category-btn" onclick="open_preview(this.textContent)">Angle</button>
+                <button type="button" class="category-btn" onclick="open_preview(this.textContent)">Speed</button>
+                <button type="button" class="category-btn" onclick="open_preview(this.textContent)">Area</button>
+                <button type="button" class="category-btn" onclick="open_preview(this.textContent)">Pressure</button>
+                <button type="button" class="category-btn" onclick="open_preview(this.textContent)">Data
+                    storage</button>
+            </div>
+            <div class="preview-div">
+                <button type="button" class="close-btn" onclick="close_preview()"><i
+                        class="material-symbols-outlined toolIcon">close</i></button>
+                <span class="preview-span">Select category</span>
+                <div class="convert-div">
+                    <input id="input-box" type="number" placeholder="Enter value" min="0">
+                    <span id="equal-sign">=</span>
+                    <input id="output-box" readonly>
+                    <select id="from-unit"></select>
+                    <span></span>
+                    <select id="to-unit"></select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--styling navbar-->
+    <style>
+        /*nav bar*/
+
+        @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+        :root {
+            --theme-color: cadetblue;
+            --theme-color-dark: rgb(67, 131, 132);
+        }
+
+        .navBar {
+            background-color: var(--theme-color);
+            position: absolute;
+            padding: 20px 0 20px 0;
+            min-width: 300px;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1;
+            overflow-x: hidden;
+        }
+
+        nav li {
+            display: inline;
+            color: white;
+            float: inline-end;
+            padding-right: 5%;
+        }
+
+        nav i:hover {
+            text-shadow: 0 0 25px white;
+            transition: all ease 250ms;
+        }
+
+        nav i {
+            cursor: pointer;
+            user-select: none;
+        }
+
+        nav a {
+            font-family: "Exo 2", sans-serif;
+            text-decoration: none;
+            font-size: 175%;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+        }
+
+        /*logo animation*/
+
+        nav a::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            margin: 0;
+            padding: 0;
+            width: 0;
+            height: 2px;
+            background-color: white;
+        }
+
+        nav a:hover::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 2px;
+            background-color: white;
+            transition: all ease 600ms;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            margin: 0;
+            padding: 0;
+            width: 0;
+            height: 2px;
+            background-color: white;
+        }
+
+        nav a:hover::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 2px;
+            background-color: white;
+            transition: all ease 600ms;
+        }
+    </style>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <script src="../theme-sync.js"></script>
+</head>
+
+<body>
+
+    <nav class="navBar">
+        <ul>
+            <a href="../index.html" class="webLogo"><span><i class="material-symbols-outlined">handyman</i>XTool<i
+                        class="material-symbols-outlined">handyman</i></span></a>
+        </ul>
+    </nav>
+
+
+    <div class="header-div">
+        <h1 id="app-title">Notes App</h1>
+    </div>
+
+    <button type="button" class="scroll-btn" onclick="handlingScroll()"><i class="material-symbols-outlined"><span
+                class="scrollIcon">keyboard_double_arrow_down</span></i></button>
+
+    <div class="notes-preview" data-notes-preview>
+        <div class="preview-container">
+            <button type="button" class="exit-button" data-preview-exit-btn><i
+                    class="material-symbols-outlined">close</i></button>
+            <h2 class="preview-title" data-preview-title></h2>
+            <h5 class="preview-content" data-preview-content></h5>
+        </div>
+    </div>
+    <div class="input-container">
+        <h1 class="input-note input-form">Add new note:</h1>
+        <div class="input-form">
+            <h2 class="note-title">Title</h2>
+            <input data-input-title class="input-title" type="text" placeholder="Enter note title">
+        </div>
+        <div class="input-form">
+            <h2 class="note-content">Note</h2>
+            <textarea data-input-content class="input-content" placeholder="Enter note content"></textarea>
+        </div>
+        <button data-submit-note type="submit" class="submit-button">Submit</button>
+    </div>
+
+    <div class="alert-msg" data-alert-msg>Alert message</div>
+
+    <div class="section-container">
+        <h2 class="section-text" id="section-msg">Your notes</h2>
+        <div class="notes-list" data-notes-section></div>
+    </div>
+
+
+    <!--styling navbar-->
+    <style>
+        /*nav bar*/
+
+        @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+        :root {
+            --theme-color: cadetblue;
+            --theme-color-dark: rgb(67, 131, 132);
+        }
+
+        .navBar {
+            background-color: var(--theme-color);
+            position: absolute;
+            padding: 20px 0 20px 0;
+            min-width: 300px;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1;
+            overflow-x: hidden;
+        }
+
+        nav li {
+            display: inline;
+            color: white;
+            float: inline-end;
+            padding-right: 5%;
+        }
+
+        nav i:hover {
+            text-shadow: 0 0 25px white;
+            transition: all ease 250ms;
+        }
+
+        nav i {
+            cursor: pointer;
+            user-select: none;
+        }
+
+        nav a {
+            font-family: "Exo 2", sans-serif;
+            text-decoration: none;
+            font-size: 175%;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+
+        }
+
+        /*logo animation*/
+
+        nav a::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            margin: 0;
+            padding: 0;
+            width: 0;
+            height: 2px;
+            background-color: white;
+        }
+
+        nav a:hover::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 2px;
+            background-color: white;
+            transition: all ease 600ms;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            margin: 0;
+            padding: 0;
+            width: 0;
+            height: 2px;
+            background-color: white;
+        }
+
+        nav a:hover::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 2px;
+            background-color: white;
+            transition: all ease 600ms;
+        }
+    </style>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

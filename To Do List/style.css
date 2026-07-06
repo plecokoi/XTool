@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root {
+    --theme-color: cadetblue;
+    --theme-color-dark: rgb(67, 131, 132);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.app-container {
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+
+.appendStyle {
+    word-break: break-all;
+    text-align: left;
+    color: black;
+    font-size: 20px;
+    margin-right: 10px;
+    font-family: "Nunito", sans-serif;
+}
+
+.appendDivStyle {
+    background-color: white;
+    margin-bottom: 8px;
+    padding: 5px 10px;
+    display: flex;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #939697;
+}
+
+.btnStyle {
+    background-color: var(--theme-color);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    padding: 5px 7px 5px 7px;
+}
+
+.btnStyle:hover {
+    background-color: var(--theme-color-dark);
+}
+
+#container {
+    text-align: center;
+    background-color: var(--theme-color);
+    padding: 30px;
+    padding-top: 40px;
+    margin: 20%;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+#do {
+    color: black;
+    text-align: center;
+    font-size: 1cm;
+    font-family: "Exo 2", sans-serif;
+    font-weight: 600;
+}
+
+#input {
+    width: 80%;
+    height: 1cm;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    padding-left: 10px;
+    border: 2px solid #d1d3d4;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    font-family: "Nunito", sans-serif;
+}
+
+#input:focus {
+    outline: none;
+    border-color: var(--theme-color-dark);
+}
+
+#input::placeholder {
+    font-size: 20px;
+    position: relative;
+}
+
+#addToDo {
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+    color: var(--theme-color);
+    font-size: 20px;
+    font-weight: bolder;
+    margin-left: 10px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+#addToDo:hover {
+    box-shadow: 0 0 10px var(--theme-color-dark);
+}
+
+#addToDo:active {
+    box-shadow: none
+}
+
+/*DARK THEME (BY GEMINI)*/
+
+.dark-theme html {
+    background: #0e1617 !important;
+    min-height: 100vh !important;
+}
+
+.dark-theme {
+    background: linear-gradient(135deg, #0e1617 0%, #152224 50%, #1e3133 100%) !important;
+    background-attachment: fixed !important;
+    background-size: cover !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+    color: white;
+}
+
+.dark-theme .navBar {
+    background-color: rgba(21, 34, 36, 0.85);
+    border-bottom: 1px solid rgba(95, 158, 160, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.dark-theme nav a {
+    color: var(--theme-color-light) !important;
+}
+
+.dark-theme nav a::before,
+.dark-theme nav a::after {
+    background-color: var(--theme-color-light);
+}
+
+
+.dark-theme #do {
+    color: #ffffff !important;
+    text-shadow: 0 2px 10px rgba(95, 158, 160, 0.2);
+}
+
+.dark-theme #container {
+    background-color: rgba(34, 55, 58, 0.45) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(67, 131, 132, 0.3) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.dark-theme #input {
+    background-color: #22373a !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(67, 131, 132, 0.25) !important;
+}
+
+.dark-theme #input:focus {
+    box-shadow: 0 0 8px rgba(67, 131, 132, 0.4);
+}
+
+.dark-theme #input::placeholder {
+    color: rgba(255, 255, 255, 0.35) !important;
+}
+
+.dark-theme #addToDo {
+    background-color: #22373a !important;
+    color: #ffffff !important;
+    transition: all 200ms ease;
+} 
+
+.dark-theme #addToDo:hover {
+    background-color: var(--theme-color-light) !important;
+    box-shadow: 0 0 12px rgba(67, 131, 132, 0.5);
+}
+
+.dark-theme .appendDivStyle {
+    background-color: rgba(21, 34, 36, 0.6) !important;
+    border: 1px solid rgba(67, 131, 132, 0.25) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.dark-theme .appendStyle {
+    color: #ffffff !important;
+}
+
+.dark-theme .btnStyle {
+    background-color: transparent !important;
+    color: rgba(255, 255, 255, 0.6) !important;
+    transition: all 150ms ease;
+}
+
+.dark-theme .btnStyle:hover {
+    color: #ff5252 !important;
+    background-color: rgba(255, 82, 82, 0.1) !important;
+}
+
+.dark-theme #input:-webkit-autofill,
+.dark-theme #input:-webkit-autofill:hover, 
+.dark-theme #input:-webkit-autofill:focus {
+    -webkit-text-fill-color: #ffffff !important;
+    -webkit-box-shadow: 0 0 0px 1000px #22373a inset !important;
+    transition: background-color 5000s ease-in-out 0s;
+    border: 1px solid rgba(67, 131, 132, 0.25) !important;
+    caret-color: #ffffff !important;
+}
