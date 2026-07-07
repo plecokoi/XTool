@@ -1,19 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-*::before,
-*::after {
+*::before, *::after {
     padding: 0;
     margin: 0;
-    border: 0;
     box-sizing: border-box;
-    width: 100%;
 }
 
 :root {
     --danger-color: #ff4444;
     --danger-color-dark: #CC0000;
-    --success-color: #00C851;
-    --success-color-dark: #007E33;
+    --success-color: #2e8b57;
+    --success-color-dark: #036128;
     --primary-color: #4285F4;
     --primary-color-dark: #0d47a1;
     --theme-color: cadetblue;
@@ -46,7 +43,8 @@ body {
 
 #app-title {
     text-align: center;
-    font-size: 1cm;
+    margin-bottom: 50px;
+    font-size: 2rem;
     font-family: "Exo 2", sans-serif;
     font-weight: 600;
 }
@@ -105,82 +103,83 @@ body {
     visibility: visible;
 }
 
-.input-note {
-    font-size: 20px;
-    background-color: var(--theme-color);
-    border: 0.5px solid var(--theme-color-dark);
-    color: white;
-}
-
 .note-content {
     margin: 0 0 20px 0;
-    color: white;
-}
-
-.note-title {
-    color: white;
 }
 
 .input-container {
-    margin: auto;
-    width: fit-content;
-    text-align: center;
+    margin: 20px auto;
+    width: 95%;
+    max-width: 700px;
     display: flex;
     flex-direction: column;
-    width: 80%;
-    max-width: 900px;
+    align-items: center;
+    padding: 25px;
+    box-sizing: border-box;
+    border-radius: 12px;
     font-family: "Nunito", sans-serif;
+    background-color: var(--theme-color); 
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.input-form h2 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-align: left;
+    color: white;
 }
 
 .input-form {
-    background-color: var(--theme-color);
-    padding: 1rem;
+    border: none !important;
+    padding: 0 !important;
+    margin-bottom: 15px;
     display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    border: 0.5px solid var(--theme-color-dark);
-    border-top: none;
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch; 
 }
 
-.input-title,
-.input-content {
-    margin: 0 0 10px 0;
-    padding: 10px;
-    font-size: 1rem;
-    flex: 1 1 100%;
-    flex-wrap: wrap;
+.input-title, .input-content {
     outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 15px !important;
+    border-radius: 8px !important;
+    margin-bottom: 15px;
+    border: none;
     font-family: "Nunito", sans-serif;
 }
 
 .input-content {
-    min-height: 110px;
-    border: none;
-}
-
-.input-title {
-    width: 80%;
-    border: none;
+    min-height: 120px;
+    resize: vertical;
+    display: block;
+    flex: 0 0 auto;
 }
 
 .submit-button {
+    width: 100%;
     margin: 5px 0;
-    background-color: var(--success-color);
-    border: none;
-    font-size: 25px;
+    font-size: 20px;
     color: white;
     border-radius: 5px;
     padding: 5px;
     font-family: "Nunito", sans-serif;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px); /* This adds the frosted glass effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .submit-button:hover {
     transition: ease-out 0.5s;
     cursor: pointer;
-    background-color: var(--success-color-dark);
-    box-shadow: none;
+    background-color: rgba(255, 255, 255, 0.35);
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     outline: none;
 }
 
@@ -189,6 +188,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, auto));
     max-width: 1000px;
+    gap: 20px;
 }
 
 .notes-container {
@@ -381,7 +381,6 @@ body {
 .dark-theme .input-form {
     background-color: transparent !important;
     border: none !important;
-    padding: 10px 0 !important;
     margin-bottom: 15px;
 }
 

@@ -73,8 +73,17 @@ function fetchApi() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(requestBody)
     })
-        .then(res => res.json())
+        .then(res => {
+
+            if (!res.ok) {
+                throw new Error(res.status)
+            }
+            return res.json();
+
+        })
+
         .then(data => {
+
             let bot_response = data.candidates[0].content.parts[0].text;
             let formattedResponse = bot_response
                 .replace(/\*(.*?)\*/g, "<p>$1</p>");
@@ -83,13 +92,20 @@ function fetchApi() {
             const msgSpan = document.createElement('span');
             msgSpan.innerHTML = formattedResponse;
             botMsg.appendChild(msgSpan);
+
         })
         .catch(err => {
+
             msgDiv.remove();
-            let error_msg = "Sorry, there was an error processing your request";
             const msgSpan = document.createElement('span');
-            msgSpan.textContent = error_msg;
+            if (err.message === "503" || err.message === "429") {
+                msgSpan.textContent = "Server is busy. Please wait 10 seconds and try again.";
+            } else {
+                msgSpan.textContent = "Sorry, there was an error processing your request.";
+                console.error("Fetch Error:", err);
+            }
             botMsg.appendChild(msgSpan);
+            
         });
 
     conversationPanel.scrollTop = conversationPanel.scrollHeight;

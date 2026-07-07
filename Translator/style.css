@@ -35,8 +35,8 @@ h1 {
 }
 
 .translate-div {
-    width: 50%;
-    min-width: 380px;
+    width: 90%;
+    max-width: 550px;
     height: max-content;
     border: 3px solid black;
     margin: 10px auto 0 auto;
@@ -51,7 +51,7 @@ h1 {
 
 .control-panel {
     display: grid;
-    grid-template-columns: 1fr 1fr 3fr 1fr 3fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(0px, 1fr));
 }
 
 .translate-div textarea {
@@ -96,11 +96,10 @@ h1 {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    font-size: 20px;
     background-color: var(--theme-color);
     color: white;
-    width: 50%;
-    min-width: 380px;
+    width: 70%;
+    max-width: 550px;
     cursor: pointer;
     font-family: "Nunito", sans-serif;
 }
@@ -111,13 +110,14 @@ h1 {
 }
 
 .warning-msg {
-    margin: 50px auto 0 auto;
+    margin: 20px auto 0 auto;
     padding: 10px;
     text-align: center;
-    width: 50%;
-    min-width: 380px;
+    width: 80%;
+    max-width: 250px;
     box-sizing: border-box;
     border: 2px solid var(--theme-color-dark);
+    border-radius: 8px;
     font-size: 17px;
     background-color: var(--theme-color);
     color: white;

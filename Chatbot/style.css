@@ -20,10 +20,11 @@
 .phone-div {
     display: flex;
     flex-direction: column;
-    width: 400px;
-    height: 450px;
+    width: 95%;
+    max-width: 500px;
+    height: calc(100vh - 280px);
     border-radius: 10px;
-    margin: 40px auto 40px auto;
+    margin: 20px auto;
     box-sizing: border-box;
     box-shadow: 0 0 5px gray;
 }
@@ -70,15 +71,21 @@
     border-bottom-right-radius: 5px;
     height: 10%;
     display: flex;
-
+    box-sizing: border-box;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    padding: 8px;
 }
 
 .input-box {
     outline: none;
     border: 1px solid var(--theme-color);
-    padding: 10px 20px;
+    padding: 8px 20px;
     margin: 5px;
     flex: 1;
+    min-width: 0;
     border-radius: 20px;
     font-family: "Nunito", sans-serif;
 }
@@ -95,18 +102,18 @@
 .button-div button {
     width: 40px;
     height: 40px;
-    background-color: white;
+    background-color: transparent;
     color: var(--theme-color);
     border: none;
     border-radius: 50%;
     cursor: pointer;
-    padding: 7px;
     text-align: center;
+    transition: all 150ms ease;
 }
 
 .button-div button:hover {
-    color: var(--theme-color-dark);
-    text-shadow: 0 0 40px var(--theme-color-dark);
+    background-color: rgba(0, 0, 0, 0.093);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .bot-avatar,
@@ -138,7 +145,7 @@
 .user-msg {
     color: white;
     line-height: 100%;
-    width: 200px;
+    width: 50%;
     border-radius: 5px;
     padding: 5px;
     word-wrap: break-word;
@@ -284,8 +291,8 @@
 }
 
 .dark-theme .button-div button:hover {
-    color: #ffffff !important;
-    text-shadow: 0 0 8px var(--theme-color-light);
+    background-color: rgba(200, 200, 200, 0.15) !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05) !important;
 }
 
 .dark-theme .navBar {

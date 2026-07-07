@@ -12,7 +12,6 @@ body {
 
 .app-container {
     margin-top: 150px;
-    margin-bottom: 50px;
 }
 
 .appendStyle {
@@ -26,13 +25,56 @@ body {
 
 .appendDivStyle {
     background-color: white;
-    margin-bottom: 8px;
+    margin-top: 8px;
     padding: 5px 10px;
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-items: center;
     border-radius: 5px;
     align-items: center;
     justify-content: space-between;
     border: 1px solid #939697;
+}
+
+#toDoContainer{
+    max-height: calc(100vh - 450px);
+    overflow-y: auto;
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: white transparent;
+    padding: 5px;
+    position: relative; 
+    margin-top: 15px;
+    padding-top: 20px;
+}
+
+#toDoContainer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10%;       
+    right: 10%;  
+    height: 1px;     
+    background: linear-gradient(
+        to right, 
+        rgba(255, 255, 255, 0.1), 
+        rgba(255, 255, 255, 0.2), 
+        rgba(255, 255, 255, 0.1)
+    );
+}
+
+.dark-theme #toDoContainer::before{
+    background: linear-gradient(
+        to right, 
+        rgba(67, 131, 132, 0.1), 
+        rgba(67, 131, 132, 0.2), 
+        rgba(67, 131, 132, 0.1)
+    );
+}
+
+#toDoContainer:empty{
+    display: none;
 }
 
 .btnStyle {
@@ -50,14 +92,16 @@ body {
 }
 
 #container {
+    box-sizing: border-box;
+    width: 80%;
+    max-width: 400px;
     text-align: center;
     background-color: var(--theme-color);
     padding: 30px;
-    padding-top: 40px;
-    margin: 20%;
+    margin: 50px auto 0 auto;
     border-radius: 10px;
-    margin-top: 50px;
-    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 #do {
@@ -68,16 +112,27 @@ body {
     font-weight: 600;
 }
 
+.input-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 10px auto;
+}
+
 #input {
     width: 80%;
-    height: 1cm;
+    min-width: 100px;
+    height: 45px;
+    box-sizing: border-box;
     font-size: 20px;
     border: none;
     border-radius: 10px;
     padding-left: 10px;
     border: 2px solid #d1d3d4;
-    margin-bottom: 40px;
-    margin-top: 20px;
     font-family: "Nunito", sans-serif;
 }
 
@@ -92,17 +147,16 @@ body {
 }
 
 #addToDo {
+    flex-shrink: 0;
     border: none;
     border-radius: 20px;
     background-color: white;
     color: var(--theme-color);
     font-size: 20px;
     font-weight: bolder;
-    margin-left: 10px;
     cursor: pointer;
     width: 30px;
     height: 30px;
-    margin-bottom: 10px;
 }
 
 #addToDo:hover {
@@ -112,6 +166,8 @@ body {
 #addToDo:active {
     box-shadow: none
 }
+
+
 
 /*DARK THEME (BY GEMINI)*/
 
@@ -185,7 +241,7 @@ body {
 .dark-theme .appendDivStyle {
     background-color: rgba(21, 34, 36, 0.6) !important;
     border: 1px solid rgba(67, 131, 132, 0.25) !important;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15) !important;
 }
 
 .dark-theme .appendStyle {
@@ -211,4 +267,9 @@ body {
     transition: background-color 5000s ease-in-out 0s;
     border: 1px solid rgba(67, 131, 132, 0.25) !important;
     caret-color: #ffffff !important;
+}
+
+.dark-theme #toDoContainer{
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
 }

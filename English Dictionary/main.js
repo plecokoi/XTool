@@ -63,7 +63,7 @@ function data(result, word) {
 
             appDiv.innerHTML += `
             <p class="meaning-title">Definition ${setsOfMeanings.indexOf(item) + 1}</p>
-            <div id="result-div">
+            <div class="result-div">
                 <ul>
                     <li>
                         <p>Part Of Speech
@@ -118,6 +118,7 @@ closeBtn.addEventListener('click', () => {
     appDiv.innerHTML = '';
     appDiv.style.visibility = 'hidden';
     wordDiv.style.visibility = 'hidden';
+    infoElem.textContent = ""
 });
 
 speakBtn.addEventListener('click', () => {
