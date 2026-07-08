@@ -20,11 +20,48 @@
         </ul>
     </nav>
 
-    <div class="timer-div">
+    <div class="app-container">
 
-        <input type="number" id="hour" placeholder="Hour">
-        <input type="number" id="min" placeholder="Min">
-        <input type="number" id="sec" placeholder="Sec">
+        <h1 class="app-title">Timer</h1>
+
+        <div class="timer-div">
+            
+            <div class="timer-box">
+
+                <div class="hour-div">
+                    <span class="value">00</span>
+                    <span class="unit">hour</span>
+                </div>
+
+                <div class="min-div">
+                    <span class="value">00</span>
+                    <span class="unit">min</span>
+                </div>
+
+                <div class="sec-div">
+                    <span class="value">00</span>
+                    <span class="unit">sec</span>
+                </div>
+
+            </div>
+
+            <div class="button-panel">
+
+                <button type="button" class="start-btn">
+                    <span class="material-symbols-outlined startBtnText">play_arrow</span>
+                </button>
+
+                <button type="button" class="restart-btn">
+                    <span class="material-symbols-outlined">refresh</span>
+                </button>
+
+            </div>
+
+            <div class="noti-div">
+                <span class="noti-msg">Notification</span>
+            </div>
+            
+        </div>
 
     </div>
 

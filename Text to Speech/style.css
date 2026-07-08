@@ -4,6 +4,7 @@
 :root {
     --theme-color: cadetblue;
     --theme-color-dark: rgb(67, 131, 132);
+    --theme-color-light: rgb(175, 197, 197);
 }
 
 body {
@@ -248,20 +249,15 @@ h1 {
 }
 
 .dark-theme .btn {
-    background-color: #22373a !important;
-    color: #ffffff !important;
-    border-radius: 50% !important;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    padding-top: 5px;
-    transition: all 200ms ease;
-    border: 3px solid var(--theme-color-light);
+    background-color: #152224 !important;
+    color: var(--theme-color-light) !important;
+    border: 1px solid rgba(67, 131, 132, 0.3) !important;
 }
 
 .dark-theme .btn:hover {
     background-color: var(--theme-color-light) !important;
-    box-shadow: 0 0 8px rgba(67, 131, 132, 0.5);
+    color: #152224 !important;
+    box-shadow: 0 0 15px rgba(175, 197, 197, 0.3);
 }
 
 .dark-theme .option-panel{
