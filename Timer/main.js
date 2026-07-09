@@ -53,7 +53,7 @@ function savingTimer(){
 
 function allowChange(){
     timerValue.forEach(value => {
-        value.addEventListener("wheel", handleWheel);
+        value.addEventListener("wheel", handleWheel, {passive: false});
     });
 }
 

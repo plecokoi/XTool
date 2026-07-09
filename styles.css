@@ -16,10 +16,6 @@ body,html {
 
 
 
-
-
-
-
 /*DARK THEME (BY GEMINI)*/
 
 body.dark-theme {
@@ -155,6 +151,8 @@ body.dark-theme .dangerBtn:hover {
     flex-wrap: wrap;
     justify-content: center;
     gap: 40px 20px;
+    visibility: hidden;
+    padding: 10px;
 }
 
 .toolElem {
