@@ -136,6 +136,13 @@ body.dark-theme .dangerBtn:hover {
     box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4);
 }
 
+body.dark-theme .toolTabs button{
+    color: white;
+}
+
+body.dark-theme .tab-btn.active{
+    color: var(--theme-color);
+}
 
 
 
@@ -144,6 +151,57 @@ body.dark-theme .dangerBtn:hover {
 
 
 /*LAYOUT CONTAINERS*/
+
+.toolTabs{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    width: 95%;
+    max-width: 800px;
+    margin: 0 auto;
+    user-select: none;
+}
+
+@media (max-width: 400px){
+    .tab-btn{
+        font-size: 12px;
+        padding: 6px 8px;
+    }
+}
+
+.tab-btn{
+    background-color: transparent;
+    color: black;
+    font-family: "nunito", sans-serif;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    position: relative;
+}
+
+.tab-btn::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: var(--theme-color);
+    transition: width 0.3s ease;
+    margin-top: 4px;
+}
+
+.tab-btn.active::after{
+    width: 100%;
+}
+
+.tab-btn.active{
+    color: var(--theme-color-dark);
+}
 
 .toolContainer {
     margin: 20px;
@@ -407,7 +465,7 @@ body.dark-theme .dangerBtn:hover {
     display: none;
     margin: 40px auto;
     max-width: 650px;
-    min-width: 200px;
+    width: 80%;
     padding: 30px;
     border: 2px solid var(--theme-color-dark);
     border-radius: 12px;

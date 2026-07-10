@@ -18,6 +18,8 @@ const clearSettings = document.getElementById("clearSettingsBtn")
 const closeBtn = document.querySelector(".closeBtn")
 const toolCont= document.querySelector(".toolContainer")
 const settingsDiv = document.querySelector(".settingsDiv")
+const toolTab = document.querySelector(".toolTabs")
+
 const defaultSettings = {
     theme: "light",
     cardSize: "normal",
@@ -85,9 +87,8 @@ closeBtn.addEventListener("click", () => {
     recentButton.classList.remove("active");
     settingsButton.classList.remove("active");
     updateUI();
+    toolTab.style.display = "";
 })
-
-
 
 
 function restoreSettings(){
@@ -309,6 +310,7 @@ searchButton.onclick = () => {
         recentButton.classList.remove("active");
         settingsButton.classList.remove("active");
         updateUI();
+        toolTab.style.display = "none";
     }else{
         searchDiv.style.visibility = "hidden";
         searchInput.value = "";
@@ -338,6 +340,7 @@ searchInput.addEventListener("input", (event) => {
 searchInput.addEventListener("blur", () => {
     searchDiv.style.visibility = "hidden";
     updateUI();
+    toolTab.style.display = "";
 
 })
 
@@ -419,6 +422,7 @@ favouriteButton.addEventListener("click", () => {
     if (favouriteButton.classList.contains("active")){
         recentButton.classList.remove("active");
         settingsButton.classList.remove("active");
+        toolTab.style.display = "none";
     }
     updateUI();
 })
@@ -428,6 +432,7 @@ recentButton.addEventListener("click", () => {
     if (recentButton.classList.contains("active")){
         favouriteButton.classList.remove("active");
         settingsButton.classList.remove("active");
+        toolTab.style.display = "none";
     }
     updateUI();
 })
@@ -437,6 +442,7 @@ settingsButton.addEventListener("click", (event) => {
     if (settingsButton.classList.contains("active")){
         favouriteButton.classList.remove("active");
         recentButton.classList.remove("active");
+        toolTab.style.display = "none";
     }
     updateUI();
     restoreSettings();
